@@ -1,0 +1,496 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link href="/static/css/main1.css" rel="stylesheet" type="text/css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <title>COVID-19 TRACKER</title>
+    <!-- <link rel="icon" href="/static/images/disease.png" type="image/icon type"> -->
+    <style>
+   
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+         
+             body{
+                   color:#3D5170;
+                   font-family: 'Poppins', sans-serif;
+                 }
+         
+             .stats .curr_stat .row
+             {
+                height:10rem;
+             }
+             .form-inline{
+                 margin:50px;
+             }
+         </style>  
+</head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">COVID-19 Tracker| India</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+        <div class="navbar-nav">
+                <a class="nav-item nav-link active px-3" href="/">India's Stats<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active px-3" href="/statewise/">India State wise<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active px-3" href="/country/">Country wise<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active px-3" href="/news/">News<span class="sr-only">(current)</span></a>
+              </div>
+            
+  </div>
+</nav>
+    <h2 style="margin:50px">
+ATMANIRBHAR NEWS!!!
+</h2>
+
+
+<div class="news py-4 no-gutter bg-light">
+    <div class="container">
+            <div class="heading">
+                <p><small class="lead">Jaan Hai To Jahan Hai !!</small></p>
+                <h2>Latest News | India</h2>
+
+            </div>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://english.cdn.zeenews.com/sites/default/files/2020/05/17/861441-disinfectant-reuters.gif" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Spraying Disinfectants Doesn`T Eliminate New Coronavirus, Can Be Harmful, Says Who - Zee News</h5>
+                                <p class="card-text">In a document on cleaning and disinfecting surfaces as part of the response to the virus, the WHO says spraying can be ineffective.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://zeenews.india.com/world/spraying-disinfectants-doesnt-eliminate-new-coronavirus-can-be-harmful-says-who-2284261.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://im.indiatimes.in/content/2020/May/1_5ec0e45a90baa.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">As Countries Resort To Spraying Disinfectants In The Open, Who Warns It Won&#39;t Kill Coronavirus - Indiatimes.Com</h5>
+                                <p class="card-text">Many countries are making it a habit to spray disinfectants out on the streets. But WHO has made it crystal clear that doing so does not eliminate the coronavirus and even poses a health risk.In a document on cleaning and disinfecting surfaces, WHO says spray…</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.indiatimes.com/news/world/many-countries-are-spraying-disinfectants-openly-who-warns-that-it-wont-destroy-coronavirus-513435.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://images.edexlive.com/uploads/user/imagelibrary/2020/5/17/w600X390/mask.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Talking Loudly Can Increase The Risk Of Covid-19 Transmission: Study - Edexlive</h5>
+                                <p class="card-text">The experiment explains the reason behind the coronavirus infections spreading in nursing homes, conferences, households, and other places</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.edexlive.com/news/2020/may/17/talking-loudly-can-increase-the-risk-of-covid-19-transmission-study-12075.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://i.ytimg.com/vi/SFnNyDU7lMA/maxresdefault.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Coronavirus: How To Protect Your Home Against Covid-19 - Gulf News</h5>
+                                <p class="card-text">Here are some cleaning and hygiene tips to help keep the COVID-19 virus out of your home. See more videos at https://gulfnews.com/videos Read more Gulf News ...</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.youtube.com/watch?v=SFnNyDU7lMA" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://static.toiimg.com/thumb/msid-75787461,width-1070,height-580,imgsize-196460,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Covid-19 Can Cause Long-Term Organ Damage; China Adds Aftereffects To Medical Insurance - Times Of India</h5>
+                                <p class="card-text">China News: China&#39;s health authority has officially included damage to a number of internal organs as among the potential effects of the novel coronavirus, expand</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://timesofindia.indiatimes.com/world/china/covid-19-can-cause-long-term-organ-damage-china-adds-aftereffects-to-medical-insurance/articleshow/75787376.cms" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://www.deccanherald.com/sites/dh/files/article_images/2020/05/17/iStock-1210312125%20%281%29-1589711628.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">British American Tobacco Says Potential Coronavirus Vaccine Using Tobacco Leaves Ready For Human Trials - Deccan Herald</h5>
+                                <p class="card-text">The maker of Lucky Strike cigarette said once it gets approval from the U.S. Food and Drug Administration (FDA) for the vaccine, it would progress to Phase 1 trials or testing on humans.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.deccanherald.com/science-and-environment/british-american-tobacco-says-potential-coronavirus-vaccine-using-tobacco-leaves-ready-for-human-trials-838659.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2020/05/17/Pictures/prime-minister-commons-questions-chamber-london-house_98b7fcc4-981e-11ea-a091-8eb61e4add3b.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Covid-19 Vaccine May ‘Not Come To Fruition’, Says Pm Boris Johnson - Hindustan Times</h5>
+                                <p class="card-text">PM Boris Johnson is facing criticism for issuing confusing guidance on easing lockdown restrictions, which have led to Scotland, Wales and Northern Ireland retaining the widely effective earlier ‘stay home’ message</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.hindustantimes.com/world-news/covid-19-vaccine-may-not-come-to-fruition-says-pm-boris-johnson/story-XusOA6gmkhLwZzPxKD8TxO.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://innovationorigins.com/wp-content/uploads/2020/05/WhatsApp-Image-2020-05-11-at-13.15.37.jpeg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Leading Scientist Willem Mulder: &#39;Frequent Testing Is Crucial For Predicting Immune Reactions&#39; - Innovation Origins</h5>
+                                <p class="card-text">The Netherlands is busy adapting in all kinds of ways in order to deal with the corona pandemic. But are our corona measures effective at all? What are the benefits of testing? And why does a vaccine</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://innovationorigins.com/leading-scientist-willem-mulder-frequent-testing-is-crucial-for-predicting-immune-reactions/" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://cdn.images.express.co.uk/img/dynamic/11/750x445/1283343.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Type 2 Diabetes: The Best Beverage Proven To Keep Blood Sugar Levels Healthy - Express</h5>
+                                <p class="card-text">TYPE 2 diabetes is a serious problem which affects millions of people in the UK. What a person eats and drinks can either help or hinder the condition. Drinking this beverage has been proven to help keep blood sugar levels healthy.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.express.co.uk/life-style/health/1283343/type-2-diabetes-symptoms-water-vasopressin-secretion-lower-blood-sugar" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://www.telegraph.co.uk/content/dam/beauty/2020/04/16/GettyImages-527689848-xlarge_trans_NvBQzQNjv4BqEPB_dQRIyM2Cs0FMpHolCenAeAIZ4moaDaF7Qn465XM.jpg?imwidth=1200" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">What Does Vitamin D Do? And How To Get Enough Without Going Outdoors - Telegraph.Co.Uk</h5>
+                                <p class="card-text">Everything you need to know about Vitamin D from boosting immunity to better skin</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.telegraph.co.uk/beauty/skin/what-vitamin-d-how-get-enough-without-sun-best-supplements/" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="None" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Frozen Food Will Be The New Kid In The Block: Chef Ritesh Negi - Ommcom News</h5>
+                                <p class="card-text">None</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://news.google.com/__i/rss/rd/articles/CBMiY2h0dHBzOi8vd3d3Lm9tbWNvbW5ld3MuY29tL2luZGlhLW5ld3MvZnJvemVuLWZvb2Qtd2lsbC1iZS10aGUtbmV3LWtpZC1pbi10aGUtYmxvY2stY2hlZi1yaXRlc2gtbmVnadIBAA?oc=5" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://i2-prod.chroniclelive.co.uk/incoming/article18264153.ece/ALTERNATES/s1200/0_JS212041737.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Why Lifting The Lockdown Might Be Right For London But Wrong For The North - Chronicle Live</h5>
+                                <p class="card-text">There are just 24 new coronavirus cases each day in London - but thousands in the North of England</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.chroniclelive.co.uk/news/north-east-news/lifting-lockdown-might-right-london-18258803" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://img.republicworld.com/republic-prod/stories/promolarge/xxhdpi/qcnjgr0mazuwn6ay_1589696696.jpeg?tr=f-jpeg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Europe: New Inflammatory Syndrome Linked With Covid-19 Affects 230 Children, 2 Dead - Republic World - Republic World</h5>
+                                <p class="card-text">The two fatalities occurred at one each in Britain and France in Europe, the rare syndrome in children is feared to be linked with COVID-19 disease.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.republicworld.com/world-news/rest-of-the-world-news/europe-sees-2-deaths-multiple-cases-of-rare-covid-19-linked-syndrome.html" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://images.immediate.co.uk/production/volatile/sites/4/2020/05/GettyImages-1149609821-crop-75e693c.jpg?quality=90&amp;resize=960,413" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">The Wrong Time To Be Fifty: Middle-Aged People Are More Stressed In The 21st Century - Bbc Focus Magazine</h5>
+                                <p class="card-text">Life is more stressful for middle-aged people now than in the 1990s, a study has found.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.sciencefocus.com/news/the-wrong-time-to-be-fifty-middle-aged-people-are-more-stressed-in-the-21st-century/" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://i1.wp.com/odishabytes.com/wp-content/uploads/2020/05/virus-1812092_640.jpg?fit=640%2C320&amp;ssl=1" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Can Coronavirus Be Contained? Mathematical Modelling Studies Suggest A Possibility - Odishabytes</h5>
+                                <p class="card-text">New Delhi: Mathematical modelling studies suggest containing the deadly coronavirus might be possible. However, its success “cannot be guaranteed” since there is efficient human to human transmission, the Union Health Ministry said on Saturday.“Since</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://odishabytes.com/can-coronavirus-be-contained-mathematical-modelling-studies-suggest-a-possibility/" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://static.asianetnews.com/images/01e86s51rv6qptpgj7cyhrt6z3/004-jpg_1200x630xt.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">30% Of Hospitalised Coronavirus Patients Develop Dangerous Blood Clots: Medical Experts - Asianet News English</h5>
+                                <p class="card-text">The clots, also known as thrombosis, could be contributing to the number of people dying.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://newsable.asianetnews.com/world/30-of-hospitalised-coronavirus-patients-develop-dangerous-blood-clots-medical-experts-qagp0t" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/05/pjimage-28-1589693949.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">Binge Drinking Can Lead To Drunkorexia In Young Women - India Tv News</h5>
+                                <p class="card-text">Drunkorexia is a damaging and dangerous behaviour where disordered patterns of eating are used to offset negative effects of consuming excess alcohol, such as gaining weight.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.indiatvnews.com/lifestyle/news-binge-drinking-can-lead-to-drunkorexia-in-young-women-617947" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://i.guim.co.uk/img/media/09ede14a06c0b3f09b095745f051c417839198ed/0_512_2868_1721/master/2868.jpg?width=1200&amp;height=630&amp;quality=85&amp;auto=format&amp;fit=crop&amp;overlay-align=bottom%2Cleft&amp;overlay-width=100p&amp;overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&amp;enable=upscale&amp;s=5173d7b5a5de48c59e3832ab9b4ee7cf" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">&#39;Llamas Are The Real Unicorns&#39;: Why They Could Be Our Secret Weapon Against Coronavirus - The Guardian</h5>
+                                <p class="card-text">Researchers hope llama antibodies could help protect humans who have not been infected</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://amp.theguardian.comworld/2020/may/16/llama-coronavirus-antibodies-study-benefits" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://cdn.kalingatv.com/wp-content/uploads/2020/05/Covid-19-in-France.jpg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">New Single-Day Deaths From Covid-19 Continue To Drop In France - Kalinga Tv</h5>
+                                <p class="card-text">Paris: France had registered 96 new deaths from COVID-19 over the past 24 hours, fewer than the previous two 24-hour periods, while the balance of the coronavirus-related hospitalization remains negative, France&#39;s Health Ministry said.According to th</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://kalingatv.com/world/new-single-day-deaths-from-covid-19-continue-to-drop-in-france/" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="curr_news">
+            <div class="container py-3">
+                <div class="card border-0">
+                    <div class="row rounded">
+                        <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://www.ommcomnews.com/file/news/exact_750_360/9024828221589692836764566459.jpeg" class="w-100 rounded">
+                        </div>
+                        <div class="col-md-9 px-3 py-2">
+                            <div class="card-block px-3">
+                                <h5 class="card-title">20 Cancer Patients Cured Of Corona In Chennai Hospital - Ommcom News</h5>
+                                <p class="card-text">Cancer per se is a deadly disease. And when coronavirus infects a cancer patient, then certainly it is all the more worrisome as the combine can be fatal. For the 20 cancer patients in the city based Rajiv Gandhi Government Hospital, the fight was a success.</p>
+<!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                <a href="https://www.ommcomnews.com/india-news/20-cancer-patients-cured-of-corona-in-chennai-hospital" class="btn btn-info">Read More</a>
+<!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+    </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://use.fontawesome.com/fcfefdb808.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

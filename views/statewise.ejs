@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <title>COVID-19 TRACKER</title>
+    <style>
+   
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+         
+             body{
+                   color:#3D5170;
+                   font-family: 'Poppins', sans-serif;
+                 }
+         
+             .stats .curr_stat .row
+             {
+                height:10rem;
+             }
+         </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">COVID-19 Tracker| India</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+      <div class="navbar-nav">
+          <a class="nav-item nav-link active px-3" href="/">India's Stats<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/statewise/">India State wise<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/country/">Country wise<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/news/">News<span class="sr-only">(current)</span></a>
+        </div>
+      
+  </div>
+</nav>
+    
+    <div class="state py-4 no-gutter ">
+        <div class="container">
+            <div class="heading">
+                <p><small class="lead">ATMANIRBHAR STATES !!</small></p>
+                <h2>STATEWISE WISE REPORT</h2>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa fa-pencil" aria-hidden="true"></i>
+                  Last Update <%=states[0].lastupdatedtime%></a>
+            </div>
+            <table class="table table-hover table-responsive-lg">
+                <thead>
+                <tr>
+                  <th scope="col">STATE</th>
+                  <th scope="col">CONFIRMED</th>
+                  <th scope="col">RECOVERED</th>
+                  <th scope="col">DECEASED</th>
+                </tr>
+               </thead>
+               <!-- {
+                "active": "53832",
+                "confirmed": "91315",
+                "deaths": "2897",
+                "deltaconfirmed": "666",
+                "deltadeaths": "25",
+                "deltarecovered": "324",
+                "lastupdatedtime": "17/05/2020 14:22:23",
+                "recovered": "34581",
+                "state": "Total",
+                "statecode": "TT",
+                "statenotes": ""
+              }, -->
+                <tbody>
+                    <% states.forEach(function(state){ %>
+                <tr>
+                  <th scope="row"><%=state.state%></th>
+                  <td><%=state.confirmed%>
+                    <span class="deltaconfirmed badge badge-light">
+                        <span class="text-primary text-bold">
+                            +<%=state.deltaconfirmed%>
+                        </span>
+                    </span>
+                  </td>
+                  <td><%=state.recovered%>
+                    <span class="deltarecovered badge badge-light">
+                        <span class="text-success text-bold">
+                            +<%=state.deltarecovered%>
+                        </span>
+                    </span>
+                  </td>
+                  <td><%=state.deaths%>
+                    <span class="deltaconfirmed badge badge-light">
+                        <span class="text-danger text-bold">
+                            +<%=state.deltadeaths%>
+                        </span>
+                    </span>
+                  </td>
+                </tr>
+                
+               <%})%>
+               </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://use.fontawesome.com/fcfefdb808.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
