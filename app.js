@@ -14,9 +14,13 @@ app.set('view engine','ejs');
 
 
 app.get('/', function (req, res) {
-    console.log("getting home")
-    res.render('index');
-  });
+  console.log("getting home")
+  res.render('index');
+});
+app.get('/precautions', function (req, res) {
+  console.log("getting precautions")
+  res.render('precautions');
+});
   app.get('/news/', function (req, res) {
     console.log("getting news")
     res.render('news');
@@ -32,16 +36,6 @@ app.get('/', function (req, res) {
         const data = await response.json();
         series_data = data.statewise;
         len_data = series_data.length
-        // for(var i=len_data-31;i<len_data;i++){
-        //     const date = series_data[i].date;
-        //     const confirm = series_data[i].dailyconfirmed;
-        //     const recover = series_data[i].dailyrecovered;
-        //     const death = series_data[i].dailydeceased;
-        //     // dates.push(date);
-        //     // confirmed.push(parseInt(confirm));
-        //     // recovered.push(parseInt(recover));
-        //     // deceased.push(parseInt(death));
-        // }
       var l=len_data-1;     
 
     }
@@ -67,16 +61,6 @@ app.get('/', function (req, res) {
         const data = await response.json();
         series_data = data.statewise;
         len_data = series_data.length
-        // for(var i=len_data-31;i<len_data;i++){
-        //     const date = series_data[i].date;
-        //     const confirm = series_data[i].dailyconfirmed;
-        //     const recover = series_data[i].dailyrecovered;
-        //     const death = series_data[i].dailydeceased;
-        //     // dates.push(date);
-        //     // confirmed.push(parseInt(confirm));
-        //     // recovered.push(parseInt(recover));
-        //     // deceased.push(parseInt(death));
-        // }
       var l=len_data-1;     
 
     }

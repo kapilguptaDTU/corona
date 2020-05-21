@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <!-- <link href="/static/css/main1.css" rel="stylesheet" type="text/css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <title>COVID-19 TRACKER</title>
+    <!-- <link rel="icon" href="/static/images/disease.png" type="image/icon type"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        body {
+            color: #3D5170;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stats .curr_stat .row {
+            height: 10rem;
+        }
+
+        .form-inline {
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">COVID-19 Tracker| India</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active px-3" href="/">India's Stats
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link active px-3" href="/statewise/">India State wise
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link active px-3" href="/country/">Country wise
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link active px-3" href="/news/">News
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link active px-3" href="/precautions/" target="blank">PRECAUTIONS
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link active px-3" href="https://forms.gle/hqkJjH9sw4S321qq5" target="blank">PLEASE REVIEW THE WEBSITE!
+                    <span class="sr-only">(current)</span>
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+    <h2 style="margin:50px">
+        PRECAUTION IS BETTER THAN CURE!!!
+    </h2>
+
+
+    <div class="news py-4 no-gutter bg-light">
+        <div class="container">
+            <div class="heading">
+                <p>
+                    <small class="lead">Jaan Hai To Jahan Hai !!</small>
+                </p>
+                <!-- <h2>Latest News | India</h2> -->
+
+            </div>
+
+            <section class="curr_news">
+                <div class="container py-3">
+                    <div class="card border-0">
+                        <div class="row rounded">
+                            <!-- <div class="col-md-3 text-center mx-auto my-auto">
+                            <img src="https://english.cdn.zeenews.com/sites/default/files/2020/05/17/861441-disinfectant-reuters.gif" class="w-100 rounded">
+                        </div> -->
+                            <div class="col-md-12 px-3 py-2">
+                                <div class="card-block px-3">
+
+                                    <p class="card-text">
+                                        <h5 class="card-title">STAY HOME PEEPS!!!</h5>
+
+                                        <ol>
+
+                                            <li>Avoid close contact with people who are sick. Maintain at least three feet distance
+                                                between yourself and anyone who is coughing or sneezing.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Avoid touching your eyes, nose, and mouth.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Stay home when you are sick.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Cover your cough or sneeze with a tissue, then dispose of the tissue safely.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Clean and disinfect frequently-touched objects and surfaces using a regular household cleaning spray or wipe. </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Wearing a mask is not necessary unless you are taking care of an infected person. The Centers for Disease Control (CDC) does
+                                                recommend that only infected people wear masks to prevent the spread of the
+                                                virus.</li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Wash your hands often with soap and water for at least 20 seconds, especially after going to the bathroom, before eating,
+                                                and after blowing your nose, coughing, or sneezing.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li> If soap and water are not readily available, use an alcohol-based hand sanitiser
+                                                with at least 60% alcohol. Always wash hands with soap and water when hands
+                                                are visibly dirty.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li> If you have a fever, cough and difficulty breathing, seek medical attention immediately.
+                                            </li>
+                                            <br>
+                                            <br>
+                                            <li>
+                                                Keep in mind the travel advisory set out by the Ministry of Health and Welfare.
+                                            </li>
+
+                                        </ol>
+                                    </p>
+                                    <!--                                <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>-->
+                                    <!-- <a href="https://zeenews.india.com/world/spraying-disinfectants-doesnt-eliminate-new-coronavirus-can-be-harmful-says-who-2284261.html" class="btn btn-info">Read More</a> -->
+                                    <!--                                <small class="lead float-right">INDIA TODAY</small>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://use.fontawesome.com/fcfefdb808.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
