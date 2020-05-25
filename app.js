@@ -51,6 +51,33 @@ app.get('/precautions', function (req, res) {
    
   });
 
+  app.get('/event', function (req, res) {
+    console.log("getting events")
+    var series_data=[];
+    var len_data=0;
+    const url = 'https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences';
+    async function getInfo(){
+        const response = await fetch(url);
+        const data = await response.json();
+        series_data = data.paid;
+
+        len_data = series_data.length
+      var l=len_data-1;     
+console.log(l);
+    }
+    getInfo();
+    
+   setTimeout(function(){
+    console.log(series_data.length);
+    console.log(len_data);
+    res.render('events',{events:series_data});
+   },2000); 
+    
+    
+   
+  });
+  
+
   app.get('/country', function (req, res) {
     console.log("getting country")
     var series_data=[];

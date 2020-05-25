@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TrackCorona - COVID-19 Tracker with all states in India</title>
+    <meta name="description" content="Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India">
+    <meta name="author" content="TrackCorona">
+    <meta property="og:title" content="TrackCorona - COVID-19 Tracker with all states in India">
+    <meta property="og:description" content="Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India">
+    <meta property="og:image" content="https://trackcorona-images.s3.amazonaws.com/map.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TrackCorona - COVID-19 Tracker with all states in India">
+    <meta name="twitter:description" content="Track the current impact of the coronavirus pandemic and its spread throughout the world with all states in India">
+    <meta name="twitter:image" content="https://trackcorona-images.s3.amazonaws.com/map.png">
+    
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <style>
+   
+            @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+         
+             body{
+                   color:#3D5170;
+                   font-family: 'Poppins', sans-serif;
+                 }
+         
+             .stats .curr_stat .row
+             {
+                height:10rem;
+             }
+         </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">COVID-19 Tracker| India</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    
+      <div class="navbar-nav">
+          <a class="nav-item nav-link active px-3" href="/">India's Stats<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/statewise/">India State wise<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/country/">Country wise<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/news/">News<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="/precautions/" target="blank">PRECAUTIONS<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="https://codingworld.in/quarantine-a-period-of-remorse-or-a-blessing-in-disguise/" target="blank">BLOG ON QUARANTINE!<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="https://forms.gle/hqkJjH9sw4S321qq5" target="blank">PLEASE REVIEW THE WEBSITE!<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active px-3" href="https://kapilguptadtu.github.io/Web-Store/" target="blank">WEB STORE (PLAY SOMETHING!)<span class="sr-only">(current)</span></a>
+                
+        </div>
+      
+  </div>
+</nav>
+    
+    <div class="state py-4 no-gutter ">
+        <div class="container">
+            <div class="heading">
+                <p><small class="lead">ATMANIRBHAR EVENTS !!</small></p>
+                <h2>EVENT WISE REPORT</h2>
+                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-info shadow-sm"><i class="fa fa-pencil" aria-hidden="true"></i>
+                  Last Update 1 HOUR AGO</a>
+            </div>
+            <table class="table table-hover table-responsive-lg">
+                <thead>
+                <tr>
+                  <th scope="col">VENUE</th>
+                  <th scope="col">CONF NAME</th>
+                  <th scope="col">CONF START DATE</th>
+                  <th scope="col">CITY</th>
+                </tr>
+               </thead>
+              
+               <!-- <th scope="col">VENUE</th>
+               <th scope="col">CONF NAME</th>
+               <th scope="col">CONF START DATE</th>
+               <th scope="col">CITY</th> -->
+
+
+                <tbody>
+                    <% events.forEach(function(event){ %>
+                <tr>
+                  <th scope="row"><%=event.venue%></th>
+                  <td>-<%=event.confName%>
+                  </td>
+                  <td><%=event.confStartDate%>
+                  </td>
+                  <td><%=event.confEndDate%>
+                  </td>
+                </tr>
+                
+               <%})%>
+               </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://use.fontawesome.com/fcfefdb808.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
