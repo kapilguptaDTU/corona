@@ -30,11 +30,35 @@ app.get('/precautions', function (req, res) {
     console.log("getting statewise")
     var series_data=[];
     var len_data=0;
+    var chartarr=[];
+    
     const url = 'https://api.covid19india.org/data.json';
     async function getInfo(){
         const response = await fetch(url);
         const data = await response.json();
         series_data = data.statewise;
+        series_data.forEach(function(state){
+          var st=state.state;
+        
+          if(state.state==='Delhi')
+          {
+            st='nct of delhi';
+          }
+          if(state.state==='Andaman and Nicobar Islands')
+          {
+            st='Andaman and Nicobar';
+          }
+          
+          if(state.state==='Dadra and Nagar Haveli and Daman and Diu')
+          {
+            st='Dadra and Nagar Haveli';
+          }
+          
+          chartarr.push([
+          st.toLowerCase(),parseInt(state.confirmed)
+          ]);
+          // console.log()
+        });
         len_data = series_data.length
       var l=len_data-1;     
 
@@ -44,38 +68,41 @@ app.get('/precautions', function (req, res) {
    setTimeout(function(){
     console.log(series_data.length);
     console.log(len_data);
-    res.render('statewise',{states:series_data});
-   },300); 
+    console.log(chartarr);
+    console.log(chartarr.length);
+    
+    res.render('statewisecopy',{states:series_data,chartdata:chartarr});
+   },400); 
     
     
    
   });
 
-  app.get('/event', function (req, res) {
-    console.log("getting events")
-    var series_data=[];
-    var len_data=0;
-    const url = 'https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences';
-    async function getInfo(){
-        const response = await fetch(url);
-        const data = await response.json();
-        series_data = data.paid;
+//   app.get('/event', function (req, res) {
+//     console.log("getting events")
+//     var series_data=[];
+//     var len_data=0;
+//     const url = 'https://o136z8hk40.execute-api.us-east-1.amazonaws.com/dev/get-list-of-conferences';
+//     async function getInfo(){
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         series_data = data.paid;
 
-        len_data = series_data.length
-      var l=len_data-1;     
-console.log(l);
-    }
-    getInfo();
+//         len_data = series_data.length
+//       var l=len_data-1;     
+// console.log(l);
+//     }
+//     getInfo();
     
-   setTimeout(function(){
-    console.log(series_data.length);
-    console.log(len_data);
-    res.render('events',{events:series_data});
-   },2000); 
+//    setTimeout(function(){
+//     console.log(series_data.length);
+//     console.log(len_data);
+//     res.render('events',{events:series_data});
+//    },2000); 
     
     
    
-  });
+//   });
   
 
   app.get('/country', function (req, res) {
@@ -98,14 +125,15 @@ console.log(l);
     console.log(len_data);
     res.render('country',{states:series_data});
    },300); 
-    
-    
-   
-  });
-    
+ 
 
-// app.listen(3000, function () {
-//   console.log('Example app listening on port 3000!');
-// });
+  });
+  
 app.listen(process.env.PORT,process.env.IP);
 console.log("IMDb V2 started"+process.env);
+
+
+// app.listen(3000, () => {
+//     console.log('Express server started at port 3000');
+
+// });
